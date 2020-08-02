@@ -5,11 +5,11 @@ let ready = false;
 let imagesLoaded = 0;
 let totalImages = 0;
 let photosArray = [];
+let count = 5;
 
 // Unsplash API credentials
-const count = 15;
 const apiKey = '-zWC978g0_Oflj-eWKlh1GZ-Mgi2PlKvVqyxN7HwVMI';
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 /* 
 Wanted responses that are part of the API:
@@ -25,6 +25,7 @@ function imageLoaded(){
     if(imagesLoaded === totalImages){
         ready = true;
         loader.hidden = true;
+        count = 15;
     }
 }
 
