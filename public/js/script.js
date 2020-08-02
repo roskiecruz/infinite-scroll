@@ -74,7 +74,6 @@ async function getPhotos(){
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
-        console.log(photosArray);
         displayPhotos();
         if (isInitialLoad) { 
             updateAPIURLWithNewCount(15);
