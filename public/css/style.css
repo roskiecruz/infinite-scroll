@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 html {
     box-sizing: border-box; /* To avoid adding extra width to a page when adding padding to any element */
 }
@@ -5,4 +7,88 @@ html {
 body {
     margin: 0; /* 0 on all 4 sides */
     min-height: 100vh; /* VH = viewport height, full height of entire window, always stretch our background to the full height of the screen, even if content isn't enough */
+    font-family: Arimo, sans-serif;
+    background: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.title__break{
+    display: none;
+}
+
+.title__app {
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.title__brand {
+    font-weight: bolder;
+    letter-spacing: -1px;
+}
+
+/* Loader */
+.loader {
+    position: fixed; /* We don't want it to move even when the user scrolls the page */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.8);
+}
+
+.loader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Image Container */
+.image-container {
+    margin: 10px 20%;
+}
+
+.image-container img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 600px){
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .title__separator{
+        display: none;
+    }
+
+    .title__break{
+        display: inherit;
+        height: 0px;
+    }
+
+    .title__break br{
+        line-height: 0.2rem;
+    }
+
+    .title__app {
+        display: inline-block;
+        font-size: 2.1rem;
+        margin-top: -0.5rem;
+    }
+    .image-container{
+        margin: 10px;
+    }
 }
