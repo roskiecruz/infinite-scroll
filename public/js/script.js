@@ -21,11 +21,10 @@ photo.alt_description - description text
 
 // Check if all images were loaded
 function imageLoaded(){
-    console.log('Image loaded');
     imagesLoaded++;
     if(imagesLoaded === totalImages){
         ready = true;
-        console.log('Ready =', ready);
+        loader.hidden = true;
     }
 }
 
@@ -40,7 +39,6 @@ function setAttributes(element, attributes){
 function displayPhotos(){
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log('Total images = ', totalImages);
     // Run function for each object in photosArray
     photosArray.forEach((photo) => {
         // Create <a> item to link to Unsplash
